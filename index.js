@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 app.get('/tail', (req, res) => {
     axios.get('https://registry.faa.gov/aircraftinquiry/Search/NNumberInquiry')
       .then(response => {
+          //add user input to the input field and add submit click event
           const html = response.data
           res.json(html)
       })
